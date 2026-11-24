@@ -226,14 +226,41 @@ body.melhorias .nota{display:block}
 .grp img{width:100%;height:100%;object-fit:cover;max-height:420px}
 .grp .bd{padding:30px}
 @media(max-width:800px){.grp{grid-template-columns:1fr}}
+
+.promo{display:block;text-align:center;background:linear-gradient(90deg,#b3121a,var(--rock));color:#fff;text-decoration:none;font-size:13.5px;padding:9px 14px}
+.promo b{font-weight:800}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+.pc{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.pc .ph{position:relative;aspect-ratio:4/3;overflow:hidden}
+.pc .ph img{width:100%;height:100%;object-fit:cover}
+.pc .bd2{position:absolute;top:12px;left:12px;background:var(--leaf);color:#111;font:800 12px Inter;padding:6px 10px;border-radius:8px}
+.pc .bd{padding:18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.pc .tags{display:flex;flex-wrap:wrap;gap:6px}
+.pc .tags span{font:700 11px Inter;padding:4px 8px;border-radius:6px;background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--mut)}
+.pc h3{font-size:28px}
+.ficha{list-style:none;display:grid;gap:6px;font-size:14px;color:var(--mut);flex:1}
+.ficha b{display:inline-block;width:78px;color:var(--sand);font-weight:700}
+.pcta{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pcta .btn{min-height:46px;font-size:14px;padding:0 10px}
+@media(max-width:1000px){.pgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.pgrid{grid-template-columns:1fr}}
+.rvw{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:780px;margin:28px auto 6px}
+.rvw div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.rvw b{display:block;font:800 30px 'Barlow Condensed';color:var(--rock2)}
+.rvw small{color:var(--mut)}
+@media(max-width:600px){.rvw{grid-template-columns:1fr}}
+.fwa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:65;width:56px;height:56px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+@media(max-width:760px){.fwa{display:none}}
+footer .nota{margin-top:24px}
 </style>
 </head>
 <body>
 <div class="demo"><b>Demonstração</b> · proposta de site para a Rapel Radical RJ. Textos e valores a validar. Toque em <b>"Ver melhorias"</b> para ver o que muda.</div>
+<a class="promo" href="#agenda" data-ev="promo">☀️ <b>Temporada de rapel em cachoeira</b> chegando · entre na lista e garanta as primeiras datas →</a>
 <header><div class="wrap hd">
   <a class="logo" href="#inicio"><img src="perfil.webp" alt="" width="40" height="40"><b>Rapel Radical RJ</b></a>
-  <nav><a href="#agenda">Agenda</a><a href="#teste">Qual aventura?</a><a href="#destinos">Destinos</a><a href="#grupos">Grupos</a><a href="#duvidas">Dúvidas</a></nav>
-  <a class="btn btn-p" href="#agenda" data-ev="cta_header">Ver agenda</a>
+  <nav><a href="#passeios">Passeios</a><a href="#agenda">Agenda</a><a href="#teste">Qual aventura?</a><a href="#avaliacoes">Avaliações</a><a href="#grupos">Grupos</a><a href="#duvidas">Dúvidas</a><a class="wa" data-msg="Hi! I found your website and I would like to book a rappelling tour in Rio. Which dates are available?" href="#">EN</a></nav>
+  <a class="btn btn-p" href="#passeios" data-ev="cta_header">Reservar</a>
 </div></header>
 
 <main id="inicio">
@@ -244,10 +271,10 @@ body.melhorias .nota{display:block}
       <h1>Desça uma pedra <em>de frente pro mar</em></h1>
       <p class="lead">Rapel, pêndulo e tirolesa nos lugares mais bonitos do Rio, todo fim de semana. Instrutores certificados, equipamento, seguro aventura e fotos profissionais inclusos.</p>
       <div class="cta-row">
-        <a class="btn btn-p" href="#agenda" data-ev="cta_agenda_hero">Ver próximas datas</a>
+        <a class="btn btn-p" href="#passeios" data-ev="cta_passeios_hero">Ver passeios</a>
         <a class="btn btn-wa wa" data-msg="Oi, Rapel Radical! Vim pelo site e quero saber das próximas aventuras." data-ev="wa_hero" href="#">Falar no WhatsApp</a>
       </div>
-      <div class="chips"><span>+7.000 aventureiros</span><span>6 anos de operação</span><span>Cadastur</span><span>Seguro aventura</span></div>
+      <div class="chips"><span>+7.000 aventureiros</span><span>Desde 2020</span><span>Cadastur</span><span>Seguro aventura</span><span>Fotos inclusas</span></div>
       <p class="nota"><b>Melhoria · a reserva começa na primeira tela</b>Hoje quem chega pelo Instagram ou pelo Google precisa mandar mensagem para descobrir data, vaga e preço. Aqui, em um toque, a pessoa vê a agenda ou chama no WhatsApp.</p>
     </div>
     <div class="frame rv"><img src="hero.webp" alt="Cliente da Rapel Radical descendo de rapel com o mar ao fundo" width="760" height="1013" fetchpriority="high"><span class="tv">RAPEL RADICAL RJ</span><div class="tag"><b>Fotos profissionais inclusas</b>Você desce, a gente registra</div></div>
@@ -258,6 +285,29 @@ body.melhorias .nota{display:block}
     <div><b>Todo fim de semana</b><small>e feriados</small></div>
     <div><b>Seguro</b><small>aventura em todas as saídas</small></div>
   </div>
+</div></section>
+
+<section id="incluso" style="background:var(--bg2)"><div class="wrap">
+  <span class="eyebrow">Por que a Rapel Radical</span>
+  <h2>Você só precisa <em>de coragem</em></h2>
+  <p class="lead">Tudo isso já vem incluso em cada saída.</p>
+  <div class="inc">
+    <div class="rv"><b>Guiamento</b><span>Do ponto de encontro até o topo, com a equipe do seu lado.</span></div>
+    <div class="rv"><b>Equipamentos</b><span>Cadeirinha, capacete, cordas e equipamentos de segurança.</span></div>
+    <div class="rv"><b>Instrutores certificados</b><span>Equipe treinada para quem nunca desceu e para quem já é veterano.</span></div>
+    <div class="rv"><b>Fotos profissionais</b><span>Você vive a aventura, a gente registra.</span></div>
+    <div class="rv"><b>Seguro aventura</b><span>Em todas as saídas.</span></div>
+    <div class="rv"><b>Cadastur</b><span>Empresa registrada no Ministério do Turismo.</span></div>
+  </div>
+  <p class="nota"><b>Melhoria · confiança antes do preço</b>Seguro, Cadastur, fotos e instrutores aparecem só em letras pequenas nas artes. Quem nunca fez rapel decide pela segurança: aqui isso vem antes de qualquer conversa.</p>
+</div></section>
+
+<section id="passeios"><div class="wrap">
+  <span class="eyebrow">Passeios</span>
+  <h2>Escolha sua <em>próxima aventura</em></h2>
+  <p class="lead">Cada passeio mostra onde é, o que você vai fazer e a próxima data na agenda. Toque em "Reservar" e o WhatsApp abre com o passeio escrito.</p>
+  <div class="pgrid"><article class="pc rv" data-local="Pedra da Tartaruga"><div class="ph"><img src="tartaruga.webp" alt="Pedra da Tartaruga" loading="lazy" width="520" height="693"><span class="bd2" hidden></span></div><div class="bd"><div class="tags"><span>Vista para o mar</span><span>Fotos inclusas</span><span>Seguro aventura</span></div><h3>Pedra da Tartaruga</h3><ul class="ficha"><li><b>Local</b>Barra de Guaratiba</li><li><b>Atividade</b>Rapel e pêndulo</li><li><b>Valor</b>Consulte no WhatsApp</li></ul><div class="pcta"><a class="btn btn-o" href="#agenda" data-ev="ver_datas_tartaruga">Ver datas</a><a class="btn btn-p wa" data-ev="reservar_tartaruga" data-msg="Oi, Rapel Radical! Vim pelo site e quero reservar: Rapel e pêndulo em Pedra da Tartaruga. Quais as próximas datas e o valor?" href="#">Reservar</a></div></div></article><article class="pc rv" data-local="Praia da Joatinga"><div class="ph"><img src="joatinga.webp" alt="Praia da Joatinga" loading="lazy" width="520" height="693"><span class="bd2" hidden></span></div><div class="bd"><div class="tags"><span>Praia</span><span>Fotos inclusas</span><span>Seguro aventura</span></div><h3>Praia da Joatinga</h3><ul class="ficha"><li><b>Local</b>Joá</li><li><b>Atividade</b>Rapel e tirolesa</li><li><b>Valor</b>Consulte no WhatsApp</li></ul><div class="pcta"><a class="btn btn-o" href="#agenda" data-ev="ver_datas_joatinga">Ver datas</a><a class="btn btn-p wa" data-ev="reservar_joatinga" data-msg="Oi, Rapel Radical! Vim pelo site e quero reservar: Rapel e tirolesa em Praia da Joatinga. Quais as próximas datas e o valor?" href="#">Reservar</a></div></div></article><article class="pc rv" data-local="Cachoeira do Mendanha"><div class="ph"><img src="cachoeira.webp" alt="Rapel em cachoeira" loading="lazy" width="520" height="693"><span class="bd2" hidden></span></div><div class="bd"><div class="tags"><span>Cachoeira</span><span>Fotos inclusas</span><span>Seguro aventura</span></div><h3>Rapel em cachoeira</h3><ul class="ficha"><li><b>Local</b>Temporada de verão</li><li><b>Atividade</b>Rapel descendo pela água</li><li><b>Valor</b>Consulte no WhatsApp</li></ul><div class="pcta"><a class="btn btn-o" href="#agenda" data-ev="ver_datas_cachoeira">Ver datas</a><a class="btn btn-p wa" data-ev="reservar_cachoeira" data-msg="Oi, Rapel Radical! Vim pelo site e quero reservar: Rapel descendo pela água em Rapel em cachoeira. Quais as próximas datas e o valor?" href="#">Reservar</a></div></div></article><article class="pc rv" data-local="Morro da Urca"><div class="ph"><img src="gal-g21.webp" alt="Morro da Urca" loading="lazy" width="520" height="693"><span class="bd2" hidden></span></div><div class="bd"><div class="tags"><span>Cartão-postal</span><span>Fotos inclusas</span><span>Seguro aventura</span></div><h3>Morro da Urca</h3><ul class="ficha"><li><b>Local</b>Urca</li><li><b>Atividade</b>Rapel com vista da Baía</li><li><b>Valor</b>Consulte no WhatsApp</li></ul><div class="pcta"><a class="btn btn-o" href="#agenda" data-ev="ver_datas_urca">Ver datas</a><a class="btn btn-p wa" data-ev="reservar_urca" data-msg="Oi, Rapel Radical! Vim pelo site e quero reservar: Rapel com vista da Baía em Morro da Urca. Quais as próximas datas e o valor?" href="#">Reservar</a></div></div></article><article class="pc rv" data-local="Bico do Papagaio"><div class="ph"><img src="montanha.webp" alt="Bico do Papagaio" loading="lazy" width="520" height="693"><span class="bd2" hidden></span></div><div class="bd"><div class="tags"><span>Montanha</span><span>Fotos inclusas</span><span>Seguro aventura</span></div><h3>Bico do Papagaio</h3><ul class="ficha"><li><b>Local</b>Floresta da Tijuca</li><li><b>Atividade</b>Rapel no meio da floresta</li><li><b>Valor</b>Consulte no WhatsApp</li></ul><div class="pcta"><a class="btn btn-o" href="#agenda" data-ev="ver_datas_bico">Ver datas</a><a class="btn btn-p wa" data-ev="reservar_bico" data-msg="Oi, Rapel Radical! Vim pelo site e quero reservar: Rapel no meio da floresta em Bico do Papagaio. Quais as próximas datas e o valor?" href="#">Reservar</a></div></div></article><article class="pc rv" data-local="Ponte Estaiada"><div class="ph"><img src="gal-g03.webp" alt="Rapel no amanhecer" loading="lazy" width="520" height="693"><span class="bd2" hidden></span></div><div class="bd"><div class="tags"><span>Amanhecer</span><span>Fotos inclusas</span><span>Seguro aventura</span></div><h3>Rapel no amanhecer</h3><ul class="ficha"><li><b>Local</b>Ponte Estaiada</li><li><b>Atividade</b>Rapel com o sol nascendo</li><li><b>Valor</b>Consulte no WhatsApp</li></ul><div class="pcta"><a class="btn btn-o" href="#agenda" data-ev="ver_datas_ponte">Ver datas</a><a class="btn btn-p wa" data-ev="reservar_ponte" data-msg="Oi, Rapel Radical! Vim pelo site e quero reservar: Rapel com o sol nascendo em Rapel no amanhecer. Quais as próximas datas e o valor?" href="#">Reservar</a></div></div></article></div>
+  <p class="nota"><b>Melhoria · vitrine que responde antes da pergunta</b>Na Rio Radical, cada passeio mostra preço, duração, dificuldade e idade mínima. Aqui a ficha já tem local, atividade e a próxima data automática. Falta a equipe confirmar valor "a partir de", duração, nível e idade mínima para completar. Com um sistema de reservas (Mymento ou outro), o botão passa a mostrar vagas e cobrar online.</p>
 </div></section>
 
 <section id="agenda" style="background:var(--bg2)"><div class="wrap">
@@ -274,32 +324,6 @@ body.melhorias .nota{display:block}
   <p class="nota" style="max-width:760px;margin-left:auto;margin-right:auto"><b>Melhoria · menos perguntas repetidas</b>Quem tem medo de altura, quem quer cachoeira e quem quer levar a empresa chegam no WhatsApp já dizendo o que querem. O atendimento responde mais rápido e fecha mais.</p>
 </div></section>
 
-<section id="incluso"><div class="wrap">
-  <span class="eyebrow">Tudo incluso</span>
-  <h2>Você só precisa <em>de coragem</em></h2>
-  <div class="inc">
-    <div class="rv"><b>Guiamento</b><span>Do ponto de encontro até o topo, com a equipe do seu lado.</span></div>
-    <div class="rv"><b>Equipamentos</b><span>Cadeirinha, capacete, cordas e equipamentos de segurança.</span></div>
-    <div class="rv"><b>Instrutores certificados</b><span>Equipe treinada para quem nunca desceu e para quem já é veterano.</span></div>
-    <div class="rv"><b>Fotos profissionais</b><span>Você vive a aventura, a gente registra.</span></div>
-    <div class="rv"><b>Seguro aventura</b><span>Em todas as saídas.</span></div>
-    <div class="rv"><b>Cadastur</b><span>Empresa registrada no Ministério do Turismo.</span></div>
-  </div>
-  <p class="nota"><b>Melhoria · confiança antes do preço</b>Seguro, Cadastur, fotos e instrutores aparecem só em letras pequenas nas artes. Quem nunca fez rapel decide pela segurança: aqui isso vem antes de qualquer conversa.</p>
-</div></section>
-
-<section id="destinos" style="background:var(--bg2)"><div class="wrap">
-  <span class="eyebrow">Destinos</span>
-  <h2>O Rio visto <em>de cima da pedra</em></h2>
-  <div class="xgrid">
-    <div class="xp rv"><div class="ph"><img src="tartaruga.webp" alt="Rapel com o mar verde abaixo" loading="lazy" width="520" height="693"></div><div class="bd"><span class="lv">Barra de Guaratiba</span><h3>Pedra da Tartaruga</h3><p>Rapel e pêndulo com o mar como cenário.</p><a class="btn btn-wa wa" data-msg="Oi! Vim pelo site e quero fazer rapel na Pedra da Tartaruga." data-ev="wa_tartaruga" href="#">Quero esse</a></div></div>
-    <div class="xp rv"><div class="ph"><img src="joatinga.webp" alt="Cliente comemorando no alto da pedra com vista da praia" loading="lazy" width="520" height="924"></div><div class="bd"><span class="lv">Joá</span><h3>Praia da Joatinga</h3><p>Rapel e tirolesa numa das praias mais bonitas do Rio.</p><a class="btn btn-wa wa" data-msg="Oi! Vim pelo site e quero fazer rapel e tirolesa na Joatinga." data-ev="wa_joatinga" href="#">Quero esse</a></div></div>
-    <div class="xp rv"><div class="ph"><img src="cachoeira.webp" alt="Cachoeira de 100 metros de altura" loading="lazy" width="520" height="924"></div><div class="bd"><span class="lv">Temporada de verão</span><h3>Rapel em cachoeira</h3><p>Até 100 metros de altura, descendo pela água.</p><a class="btn btn-wa wa" data-msg="Oi! Vim pelo site e quero entrar na lista da temporada de rapel em cachoeira." data-ev="wa_cachoeira" href="#">Entrar na lista</a></div></div>
-    <div class="xp rv"><div class="ph"><img src="montanha.webp" alt="Rapel em paredão com vista das montanhas" loading="lazy" width="520" height="693"></div><div class="bd"><span class="lv">Toda a cidade</span><h3>Urca, Bico do Papagaio e mais</h3><p>Morro da Urca, Pedra do Picão, Ponte Estaiada ao amanhecer, Gruta do Morcego, Bananal.</p><a class="btn btn-wa wa" data-msg="Oi! Vim pelo site e quero conhecer os destinos de rapel." data-ev="wa_destinos" href="#">Ver opções</a></div></div>
-  </div>
-  <p class="nota"><b>Melhoria · lista de espera da temporada</b>A temporada de cachoeiras foi anunciada, mas não há onde se inscrever. Uma lista de interessados no WhatsApp enche as primeiras datas antes de abrir a agenda.</p>
-</div></section>
-
 <section id="galeria"><div class="wrap">
   <span class="eyebrow">Quem já desceu</span>
   <h2>Pessoas reais, <em>experiências incríveis</em></h2>
@@ -314,7 +338,14 @@ body.melhorias .nota{display:block}
   <p class="nota"><b>Melhoria · 7.000 clientes viram prova</b>Hoje são milhares de fotos e nenhuma avaliação no Google. Depois de cada saída, a foto vai junto com o pedido de avaliação. Em poucos meses, a Rapel Radical passa a aparecer com nota e comentários, como os concorrentes.</p>
 </div></section>
 
-<section id="grupos" style="background:var(--bg2)"><div class="wrap">
+<section id="avaliacoes" style="background:var(--bg2)"><div class="wrap">
+  <div style="text-align:center"><span class="eyebrow">Avaliações</span><h2>Quem viveu, <em>aprovou</em></h2><p class="lead" style="margin:14px auto 0">Mais de 7.000 pessoas já desceram com a gente. Fez rapel com a Rapel Radical? Conta como foi.</p>
+  <div class="rvw rv"><div><b>+7.000</b><small>aventureiros desde 2020</small></div><div><b>Google</b><small>avaliações em breve</small></div><div><b>Instagram</b><small>26,6 mil seguidores</small></div></div>
+  <div class="cta-row" style="justify-content:center"><a class="btn btn-o" href="https://www.google.com/maps/search/Rapel+Radical+RJ" target="_blank" rel="noopener" data-ev="avaliar_google">Avaliar no Google</a><a class="btn btn-o" href="https://www.instagram.com/rapel_radical/" target="_blank" rel="noopener">Ver no Instagram</a></div></div>
+  <p class="nota" style="max-width:780px;margin-left:auto;margin-right:auto"><b>Melhoria · 7.000 clientes viram avaliações</b>A Rio Radical mostra cerca de 1.100 avaliações 5 estrelas, Google e TripAdvisor. A Rapel Radical tem zero. Com o Perfil da Empresa criado e o pedido de avaliação enviado junto com as fotos de cada saída, esta seção passa a mostrar as avaliações reais. Não colocamos depoimentos inventados.</p>
+</div></section>
+
+<section id="grupos"><div class="wrap">
   <div class="grp rv">
     <img src="costao.webp" alt="Grupo descendo de rapel em costão com vista do mar" loading="lazy" width="520" height="693">
     <div class="bd"><span class="eyebrow">Grupos e empresas</span><h2>Aniversário, equipe <em>ou turma de amigos</em></h2><p class="lead">Datas exclusivas para grupos, com a mesma segurança e as fotos de todo mundo.</p><div class="cta-row"><a class="btn btn-p wa" data-msg="Oi! Vim pelo site e quero orçar uma aventura para um grupo." data-ev="wa_grupo" href="#">Orçar para meu grupo</a></div></div>
@@ -342,10 +373,12 @@ body.melhorias .nota{display:block}
 </main>
 
 <footer><div class="wrap fgrid">
-  <div><a class="logo" href="#inicio"><img src="perfil.webp" alt="" width="40" height="40"><b>Rapel Radical RJ</b></a><p style="margin-top:10px">Agência de turismo de aventura · Rio de Janeiro · desde 2020</p></div>
-  <div>Reservas: <a class="wa" data-msg="Oi, Rapel Radical! Vim pelo site." href="#">(21) 98140-0511</a><br><a href="https://www.instagram.com/rapel_radical/" target="_blank" rel="noopener">Instagram @rapel_radical</a></div>
-</div></footer>
+  <div><a class="logo" href="#inicio"><img src="perfil.webp" alt="" width="40" height="40"><b>Rapel Radical RJ</b></a><p style="margin-top:10px">Agência de turismo de aventura · Rio de Janeiro · desde 2020<br>Registro no Cadastur · Seguro aventura em todas as saídas<br>CNPJ: a inserir</p></div>
+  <div>Reservas: <a class="wa" data-msg="Oi, Rapel Radical! Vim pelo site." href="#">(21) 98140-0511</a><br><a href="https://www.instagram.com/rapel_radical/" target="_blank" rel="noopener">Instagram @rapel_radical</a><br>Pagamento: Pix e cartão (a confirmar)<br><span style="color:var(--mut)">Termos · Política de cancelamento · Privacidade (a definir com a equipe)</span><br><a class="wa" data-msg="Hi! I found your website and I would like to book a rappelling tour in Rio. Which dates are available?" href="#">English? Book on WhatsApp</a></div>
+</div>
+<div class="wrap"><p class="nota"><b>Melhoria · empresa séria se mostra</b>Como na Rio Radical: CNPJ, políticas de cancelamento e privacidade, formas de pagamento e Cadastur no rodapé. Isso tira o medo de quem nunca ouviu falar da empresa e é pedido por plataformas de reserva e pelo Google.</p></div></footer>
 
+<a class="fwa wa" data-ev="wa_flutuante" data-msg="Oi, Rapel Radical! Vim pelo site e quero reservar." href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="28" height="28"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
 <div class="sticky" id="sticky"><a class="btn btn-p" href="#agenda">Agenda</a><a class="btn btn-wa wa" data-msg="Oi, Rapel Radical! Vim pelo site e quero reservar." href="#">WhatsApp</a></div>
 
 <button class="tog" id="tog" type="button"><i></i><span>Ver melhorias</span></button>
@@ -357,6 +390,7 @@ body.melhorias .nota{display:block}
     <li>Pedir avaliação no Google depois de cada saída, junto com as fotos.</li>
     <li>Colocar este site na bio, no lugar do link solto.</li>
     <li>Instalar o Pixel da Meta e anunciar a temporada de cachoeiras antes dos concorrentes. Uradical e Expedição Adventure já estão anunciando.</li>
+    <li>Conectar um sistema de reservas (Mymento ou outro) para mostrar vagas, cobrar por Pix ou cartão e confirmar a reserva sozinho, 24 horas.</li>
     <li>Saber de onde vem cada cliente (post, story, Google, indicação) pela mensagem pronta de cada botão.</li>
   </ul></div>
 </div></aside>
@@ -376,6 +410,7 @@ const fut=AG.filter(a=>new Date(a[0]+'T12:00')>=hoje);
 const ag=document.getElementById('ag');
 const card=(a,past)=>{const d=new Date(a[0]+'T12:00');const dd=String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0');return '<div class="ev'+(past?' past':'')+'"><div class="dt">'+String(d.getDate()).padStart(2,'0')+'<small>'+MES[d.getMonth()]+'</small></div><div>'+(a[3]?'<span class="tg">'+a[3]+'</span>':'')+'<h3>'+a[1]+'</h3><p>'+a[2]+(past?' · realizado':'')+'</p></div><a class="btn btn-p wa" data-ev="reservar" data-msg="Oi, Rapel Radical! Vim pelo site e quero reservar: '+a[2]+' em '+a[1]+', dia '+dd+'. Tem vaga?" href="#">Reservar</a></div>'};
 ag.innerHTML=(fut.length?fut.map(a=>card(a,false)).join(''):'')+'<div class="ev"><div class="dt">DEZ<small>EM BREVE</small></div><div><span class="tg">Próxima agenda</span><h3>Dezembro e temporada de cachoeiras</h3><p>Entre na lista e receba as datas antes de todo mundo.</p></div><a class="btn btn-wa wa" data-ev="lista_dez" data-msg="Oi, Rapel Radical! Vim pelo site e quero receber a agenda de dezembro e da temporada de cachoeiras." href="#">Entrar na lista</a></div>'+AG.filter(a=>!fut.includes(a)).slice(-3).reverse().map(a=>card(a,true)).join('');
+document.querySelectorAll('.pc').forEach(c=>{const nx=fut.find(a=>a[1]===c.dataset.local);const b=c.querySelector('.bd2');if(nx){const d=new Date(nx[0]+'T12:00');b.textContent='Próxima data: '+String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0');b.hidden=false}else{b.textContent='Novas datas em breve';b.hidden=false;b.style.background='rgba(255,255,255,.85)'}});
 bindWa(document);
 /* quiz */
 const Q=[{q:'Você já fez rapel?',o:['Nunca, seria a primeira vez','Já fiz uma ou duas vezes','Já fiz várias, quero algo novo']},{q:'O que mais te chama?',o:['Pedra com vista para o mar','Cachoeira','Rapel com tirolesa ou pêndulo','Levar meu grupo ou empresa']},{q:'Quando quer ir?',o:['Neste fim de semana','Ainda este mês','Estou planejando para depois']}];
