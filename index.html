@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Rapel Radical RJ | Rapel, trilhas e aventuras no Rio de Janeiro</title>
+<meta name="description" content="Rapel, pêndulo e tirolesa nos lugares mais bonitos do Rio, todo fim de semana. Instrutores certificados, equipamentos, seguro aventura e fotos inclusos. Veja a agenda e reserve.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rapel Radical RJ · Agenda de rapel no Rio">
+<meta property="og:description" content="Escolha a data e reserve pelo WhatsApp. +7.000 aventureiros desde 2020.">
+<meta property="og:image" content="https://dryesko-creator.github.io/rapel-radical/og.jpg">
+<meta property="og:url" content="https://dryesko-creator.github.io/rapel-radical/">
+<link rel="canonical" href="https://dryesko-creator.github.io/rapel-radical/">
+<meta name="theme-color" content="#0d0d0f">
+<link rel="icon" href="perfil.webp">
+<link rel="preload" href="inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="hero.webp" as="image">
+<style>
+@font-face{font-family:Inter;src:url(inter-latin-wght-normal.woff2) format('woff2');font-weight:100 900;font-display:swap}
+@font-face{font-family:'Barlow Condensed';src:url(barlow-condensed-latin-700-normal.woff2) format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Barlow Condensed';src:url(barlow-condensed-latin-800-normal.woff2) format('woff2');font-weight:800;font-display:swap}
+:root{--bg:#0d0d0f;--bg2:#141417;--card:#1c1c21;--line:rgba(255,255,255,.1);--sand:#f4f1ec;--mut:#a6a6ad;--rock:#e3262e;--rock2:#ff4d4d;--leaf:#ffc83d;--wa:#25d366}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--sand);font:400 16px/1.6 Inter,system-ui,sans-serif;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:'Barlow Condensed',Impact,sans-serif;font-weight:800;text-transform:uppercase;line-height:1;letter-spacing:.3px}
+h2{font-size:clamp(34px,5vw,54px)}
+h2 em,h1 em{font-style:normal;color:var(--rock2)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:700 12px Inter;letter-spacing:2px;text-transform:uppercase;color:var(--rock2);margin-bottom:14px}
+.eyebrow:before{content:"";width:26px;height:2px;background:var(--rock)}
+.lead{color:var(--mut);font-size:17px;max-width:640px;margin-top:14px}
+section{padding:80px 0;position:relative}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;border-radius:12px;font:800 15px Inter;text-decoration:none;cursor:pointer;border:0;transition:transform .15s,box-shadow .15s}
+.btn:active{transform:scale(.98)}
+.btn-p{background:linear-gradient(180deg,var(--rock2),var(--rock));color:#fff;box-shadow:0 10px 30px rgba(227,38,46,.35)}
+.btn-o{background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--sand)}
+.btn-wa{background:var(--wa);color:#05210f}
+.btn svg{width:20px;height:20px}
+/* demo bar */
+.demo{background:#3a0f12;color:#ffd6d8;font-size:12.5px;text-align:center;padding:8px 14px}
+.demo b{color:#fff}
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(13,13,15,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo img{width:40px;height:40px;border-radius:50%;border:2px solid var(--rock)}
+.logo b{font:800 21px 'Barlow Condensed';letter-spacing:.5px;text-transform:uppercase}
+nav{display:flex;gap:22px}
+nav a{font-size:14px;color:var(--mut);text-decoration:none}
+nav a:hover{color:var(--sand)}
+.hd .btn{min-height:42px;padding:0 18px;font-size:13px}
+@media(max-width:900px){nav{display:none}}
+/* hero */
+.hero{padding:56px 0 64px;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(60% 60% at 80% 30%,rgba(227,38,46,.16),transparent 70%)}
+.hgrid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(46px,6.4vw,84px)}
+.hero .lead{font-size:18px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chips span{font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:999px;background:rgba(255,200,61,.1);border:1px solid rgba(255,200,61,.3);color:#ffe3a1}
+.frame{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:720/1000;max-height:640px;justify-self:center;width:100%;max-width:440px;box-shadow:0 30px 80px rgba(0,0,0,.55);border:1px solid var(--line)}
+.frame img{width:100%;height:100%;object-fit:cover}
+.frame .tag{position:absolute;left:14px;bottom:14px;right:14px;background:rgba(13,13,15,.8);backdrop-filter:blur(8px);border-radius:12px;padding:12px 14px;font-size:13px;color:var(--mut)}
+.frame .tag b{display:block;color:var(--sand);font-size:15px}
+.frame .tv{position:absolute;top:14px;left:14px;background:#fff;color:#111;font:800 11px Inter;padding:6px 9px;border-radius:6px;letter-spacing:.5px}
+.proof{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:40px;position:relative}
+.proof div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.proof b{display:block;font:800 30px 'Barlow Condensed';color:var(--rock2)}
+.proof small{color:var(--mut);font-size:12.5px}
+@media(max-width:900px){.hgrid{grid-template-columns:1fr;gap:32px}.proof{grid-template-columns:repeat(2,1fr)}.frame{max-width:100%;aspect-ratio:4/5}}
+@media(max-width:520px){.cta-row .btn{width:100%}}
+/* quiz */
+.quiz{background:var(--bg2)}
+.qbox{max-width:760px;margin:34px auto 0;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px}
+.qbar{height:5px;border-radius:9px;background:rgba(255,255,255,.1);overflow:hidden;margin-bottom:22px}
+.qbar i{display:block;height:100%;width:33%;background:var(--rock);transition:width .3s}
+.qstep small{color:var(--mut);font-size:13px}
+.qstep h3{font-size:30px;margin:6px 0 18px}
+.opts{display:grid;gap:10px}
+.opts button{text-align:left;font:600 15px Inter;color:var(--sand);background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;padding:16px 18px;cursor:pointer;transition:border-color .15s,background .15s}
+.opts button:hover{border-color:var(--rock);background:rgba(227,38,46,.08)}
+.qres{text-align:center}
+.qres h3{font-size:36px;margin:8px 0 10px;color:var(--rock2)}
+.qres p{color:var(--mut);margin-bottom:22px}
+.qres .again{display:block;margin:16px auto 0;background:none;border:0;color:var(--mut);text-decoration:underline;cursor:pointer;font:500 14px Inter}
+/* experiences */
+.xgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px}
+.xp{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.xp .ph{aspect-ratio:4/3;overflow:hidden}
+.xp .ph img{width:100%;height:100%;object-fit:cover}
+.xp .bd{padding:18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.xp .lv{font:700 11px Inter;letter-spacing:1.5px;text-transform:uppercase;color:var(--leaf)}
+.xp h3{font-size:26px}
+.xp p{color:var(--mut);font-size:14.5px;flex:1}
+.xp .btn{min-height:46px;font-size:14px;margin-top:8px}
+@media(max-width:1000px){.xgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.xgrid{grid-template-columns:1fr}}
+/* press */
+.press{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;margin-top:34px;background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.press img{width:100%;height:100%;object-fit:cover;max-height:420px}
+.press .bd{padding:30px}
+.press .tv{display:inline-block;background:#fff;color:#111;font:800 12px Inter;padding:6px 10px;border-radius:6px;margin-bottom:14px}
+.press h3{font-size:34px;margin-bottom:12px}
+.press p{color:var(--mut);margin-bottom:20px}
+@media(max-width:800px){.press{grid-template-columns:1fr}.press img{max-height:300px}}
+/* reels */
+.rhead{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.arrows{display:flex;gap:8px}
+.arrows button{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--sand);font-size:20px;cursor:pointer}
+.track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:30px 0 10px;scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.rc{flex:0 0 220px;scroll-snap-align:start;position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#000;cursor:pointer}
+.rc img{width:100%;height:100%;object-fit:cover}
+.rc:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.85))}
+.rc .vw{position:absolute;top:10px;left:10px;z-index:2;background:var(--rock);color:#fff;font:800 12px Inter;padding:4px 8px;border-radius:6px}
+.rc .t{position:absolute;z-index:2;left:12px;right:12px;bottom:12px;font-size:13px;font-weight:700}
+.rc .pl{position:absolute;z-index:2;top:50%;left:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;background:rgba(13,13,15,.7);display:grid;place-items:center;border:1px solid rgba(255,255,255,.3)}
+.rc .pl svg{width:22px;height:22px;margin-left:3px}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;padding:20px}
+.lb.on{display:flex}
+.lb .in{width:min(400px,100%);height:min(720px,90vh);background:#fff;border-radius:14px;overflow:hidden}
+.lb iframe{width:100%;height:100%;border:0}
+.lb .x{position:absolute;top:16px;right:16px;width:46px;height:46px;border-radius:50%;border:0;background:#fff;color:#111;font-size:22px;cursor:pointer}
+/* brands */
+.brands{background:linear-gradient(180deg,var(--bg2),var(--bg))}
+.bgrid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-top:30px}
+.nums{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.nums div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.nums b{display:block;font:800 36px 'Barlow Condensed';color:var(--rock2);line-height:1}
+.nums small{color:var(--mut);font-size:13px}
+.svc{list-style:none;display:grid;gap:12px}
+.svc li{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.svc b{display:block;font-size:16px;margin-bottom:2px}
+.svc span{color:var(--mut);font-size:14px}
+.partners{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.partners a,.partners>div{flex:1 1 200px;text-decoration:none;background:rgba(255,200,61,.08);border:1px dashed rgba(255,200,61,.45);border-radius:14px;padding:14px 16px}
+.partners b{display:block}
+.partners small{color:var(--mut)}
+@media(max-width:860px){.bgrid{grid-template-columns:1fr}}
+/* about */
+.about{display:grid;grid-template-columns:.85fr 1.15fr;gap:44px;align-items:center}
+.about img{border-radius:20px;border:1px solid var(--line);width:100%;aspect-ratio:4/5;object-fit:cover}
+.about p{color:var(--mut);margin-top:14px}
+.about .q{margin-top:22px;padding:18px 20px;border-left:3px solid var(--rock);background:var(--card);border-radius:0 12px 12px 0;color:var(--sand);font-weight:600}
+@media(max-width:860px){.about{grid-template-columns:1fr}}
+/* spots */
+.spots{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px}
+.spots a{text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.spots b{display:block;font:800 22px 'Barlow Condensed';text-transform:uppercase}
+.spots small{color:var(--mut)}
+.spots i{font-style:normal;color:var(--rock2);font-size:13px;font-weight:700;display:block;margin-top:8px}
+@media(max-width:860px){.spots{grid-template-columns:1fr 1fr}}
+/* faq */
+.faq{max-width:780px;margin:30px auto 0}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;font-weight:700;font-size:16.5px;list-style:none;display:flex;justify-content:space-between;gap:14px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--rock2);font-size:22px;line-height:1}
+details[open] summary:after{content:"−"}
+details p{color:var(--mut);margin-top:10px}
+/* final */
+.final{text-align:center;background:radial-gradient(60% 80% at 50% 0%,rgba(227,38,46,.18),transparent 70%)}
+.final .cta-row{justify-content:center}
+footer{border-top:1px solid var(--line);padding:34px 0 120px;color:var(--mut);font-size:14px}
+.fgrid{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{color:var(--sand)}
+/* sticky */
+.sticky{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:60;display:none;gap:8px;transform:translateY(calc(100% + 90px));transition:transform .3s}
+.sticky.on{transform:none}
+.sticky .btn{flex:1;min-height:52px;font-size:14px;padding:0 12px}
+@media(max-width:760px){.sticky{display:flex}}
+/* reveal */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.js .rv.in{opacity:1;transform:none}
+/* melhorias */
+.nota{display:none;margin-top:14px;background:#2a0d0f;border:1px dashed var(--rock);border-radius:12px;padding:12px 14px;font-size:13.5px;color:#ffd0d2}
+.nota b{display:block;color:var(--rock2);font-size:12px;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+body.melhorias .nota{display:block}
+.nota.flash{animation:fl 1.2s 2}
+@keyframes fl{50%{box-shadow:0 0 0 6px rgba(227,38,46,.5)}}
+.tog{position:fixed;right:16px;top:118px;z-index:70;background:#2a0d0f;border:1px solid rgba(227,38,46,.7);color:#fff;font:700 12.5px Inter;padding:10px 14px;border-radius:999px;cursor:pointer;box-shadow:0 8px 30px rgba(0,0,0,.5)}
+.tog i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--rock);margin-right:8px;animation:bl 1.4s infinite}
+@keyframes bl{50%{opacity:.2}}
+@media(max-width:760px){.tog{top:auto;right:10px;bottom:calc(150px + env(safe-area-inset-bottom));padding:7px 11px;font-size:11.5px}}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);z-index:150;background:#141417;border-left:1px solid var(--line);transform:translateX(105%);transition:transform .3s;display:flex;flex-direction:column}
+.drawer.on{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--line)}
+.dh b{font:800 22px 'Barlow Condensed';text-transform:uppercase}
+.dh button{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--sand);font-size:18px;cursor:pointer}
+.db{overflow:auto;padding:16px 20px 40px}
+.dsub{color:var(--mut);font-size:13.5px;margin-bottom:14px}
+.di{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:10px}
+.di b{display:block;color:var(--rock2);font-size:12px;letter-spacing:1px;text-transform:uppercase}
+.di p{font-size:14px;margin:6px 0 8px;color:var(--sand)}
+.di button{background:none;border:0;color:var(--leaf);font:700 13px Inter;cursor:pointer;padding:10px 0;min-height:44px}
+.fora{margin-top:20px}
+.fora h4{font:800 20px 'Barlow Condensed';text-transform:uppercase;margin-bottom:8px}
+.fora li{font-size:14px;color:var(--mut);margin:0 0 8px 18px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}.tog i{animation:none}}
+
+.ag{display:grid;gap:10px;margin-top:30px}
+.ev{display:grid;grid-template-columns:84px 1fr auto;gap:16px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+.ev .dt{background:var(--rock);color:#fff;border-radius:12px;text-align:center;padding:8px 0;font:800 30px 'Barlow Condensed';line-height:1}
+.ev .dt small{display:block;font:700 12px Inter;letter-spacing:1px}
+.ev h3{font-size:24px}
+.ev p{color:var(--mut);font-size:14px}
+.ev .tg{display:inline-block;font:700 11px Inter;color:var(--leaf);letter-spacing:1px;text-transform:uppercase;margin-bottom:2px}
+.ev .btn{min-height:46px;font-size:14px}
+.ev.past{opacity:.45}.ev.past .btn{display:none}
+@media(max-width:620px){.ev{grid-template-columns:64px 1fr}.ev .dt{font-size:24px}.ev .btn{grid-column:1/-1;width:100%}}
+.inc{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px}
+.inc div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.inc b{display:block;font:800 22px 'Barlow Condensed';text-transform:uppercase;margin-bottom:4px}
+.inc span{color:var(--mut);font-size:14px}
+@media(max-width:760px){.inc{grid-template-columns:1fr 1fr}}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:30px}
+.gal img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:14px}
+@media(max-width:620px){.gal{grid-template-columns:1fr 1fr}}
+.grp{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.grp img{width:100%;height:100%;object-fit:cover;max-height:420px}
+.grp .bd{padding:30px}
+@media(max-width:800px){.grp{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="demo"><b>Demonstração</b> · proposta de site para a Rapel Radical RJ. Textos e valores a validar. Toque em <b>"Ver melhorias"</b> para ver o que muda.</div>
+<header><div class="wrap hd">
+  <a class="logo" href="#inicio"><img src="perfil.webp" alt="" width="40" height="40"><b>Rapel Radical RJ</b></a>
+  <nav><a href="#agenda">Agenda</a><a href="#teste">Qual aventura?</a><a href="#destinos">Destinos</a><a href="#grupos">Grupos</a><a href="#duvidas">Dúvidas</a></nav>
+  <a class="btn btn-p" href="#agenda" data-ev="cta_header">Ver agenda</a>
+</div></header>
+
+<main id="inicio">
+<section class="hero"><div class="wrap">
+  <div class="hgrid">
+    <div class="rv">
+      <span class="eyebrow">Rapel, trilhas e aventuras no Rio · desde 2020</span>
+      <h1>Desça uma pedra <em>de frente pro mar</em></h1>
+      <p class="lead">Rapel, pêndulo e tirolesa nos lugares mais bonitos do Rio, todo fim de semana. Instrutores certificados, equipamento, seguro aventura e fotos profissionais inclusos.</p>
+      <div class="cta-row">
+        <a class="btn btn-p" href="#agenda" data-ev="cta_agenda_hero">Ver próximas datas</a>
+        <a class="btn btn-wa wa" data-msg="Oi, Rapel Radical! Vim pelo site e quero saber das próximas aventuras." data-ev="wa_hero" href="#">Falar no WhatsApp</a>
+      </div>
+      <div class="chips"><span>+7.000 aventureiros</span><span>6 anos de operação</span><span>Cadastur</span><span>Seguro aventura</span></div>
+      <p class="nota"><b>Melhoria · a reserva começa na primeira tela</b>Hoje quem chega pelo Instagram ou pelo Google precisa mandar mensagem para descobrir data, vaga e preço. Aqui, em um toque, a pessoa vê a agenda ou chama no WhatsApp.</p>
+    </div>
+    <div class="frame rv"><img src="hero.webp" alt="Cliente da Rapel Radical descendo de rapel com o mar ao fundo" width="760" height="1013" fetchpriority="high"><span class="tv">RAPEL RADICAL RJ</span><div class="tag"><b>Fotos profissionais inclusas</b>Você desce, a gente registra</div></div>
+  </div>
+  <div class="proof rv">
+    <div><b>+7.000</b><small>clientes desde 2020</small></div>
+    <div><b>13 saídas</b><small>só em novembro</small></div>
+    <div><b>Todo fim de semana</b><small>e feriados</small></div>
+    <div><b>Seguro</b><small>aventura em todas as saídas</small></div>
+  </div>
+</div></section>
+
+<section id="agenda" style="background:var(--bg2)"><div class="wrap">
+  <span class="eyebrow">Agenda</span>
+  <h2>Escolha a data, <em>garanta a vaga</em></h2>
+  <p class="lead">Toque em "Reservar" e o WhatsApp abre com a aventura e a data já escritas. É só confirmar a vaga.</p>
+  <div class="ag" id="ag"></div>
+  <p class="nota"><b>Melhoria · agenda que reserva</b>Hoje a agenda é uma imagem num post: a pessoa lê, decora a data e manda mensagem perguntando. Aqui cada saída tem botão próprio. As datas que já passaram somem sozinhas, e o atendimento recebe a mensagem pronta.</p>
+</div></section>
+
+<section class="quiz" id="teste"><div class="wrap">
+  <div style="text-align:center"><span class="eyebrow">Teste de 1 minuto</span><h2>Qual aventura <em>é a sua?</em></h2><p class="lead" style="margin:14px auto 0">Três perguntas e você chega no WhatsApp com a sugestão certa.</p></div>
+  <div class="qbox rv" id="qbox"></div>
+  <p class="nota" style="max-width:760px;margin-left:auto;margin-right:auto"><b>Melhoria · menos perguntas repetidas</b>Quem tem medo de altura, quem quer cachoeira e quem quer levar a empresa chegam no WhatsApp já dizendo o que querem. O atendimento responde mais rápido e fecha mais.</p>
+</div></section>
+
+<section id="incluso"><div class="wrap">
+  <span class="eyebrow">Tudo incluso</span>
+  <h2>Você só precisa <em>de coragem</em></h2>
+  <div class="inc">
+    <div class="rv"><b>Guiamento</b><span>Do ponto de encontro até o topo, com a equipe do seu lado.</span></div>
+    <div class="rv"><b>Equipamentos</b><span>Cadeirinha, capacete, cordas e equipamentos de segurança.</span></div>
+    <div class="rv"><b>Instrutores certificados</b><span>Equipe treinada para quem nunca desceu e para quem já é veterano.</span></div>
+    <div class="rv"><b>Fotos profissionais</b><span>Você vive a aventura, a gente registra.</span></div>
+    <div class="rv"><b>Seguro aventura</b><span>Em todas as saídas.</span></div>
+    <div class="rv"><b>Cadastur</b><span>Empresa registrada no Ministério do Turismo.</span></div>
+  </div>
+  <p class="nota"><b>Melhoria · confiança antes do preço</b>Seguro, Cadastur, fotos e instrutores aparecem só em letras pequenas nas artes. Quem nunca fez rapel decide pela segurança: aqui isso vem antes de qualquer conversa.</p>
+</div></section>
+
+<section id="destinos" style="background:var(--bg2)"><div class="wrap">
+  <span class="eyebrow">Destinos</span>
+  <h2>O Rio visto <em>de cima da pedra</em></h2>
+  <div class="xgrid">
+    <div class="xp rv"><div class="ph"><img src="tartaruga.webp" alt="Rapel com o mar verde abaixo" loading="lazy" width="520" height="693"></div><div class="bd"><span class="lv">Barra de Guaratiba</span><h3>Pedra da Tartaruga</h3><p>Rapel e pêndulo com o mar como cenário.</p><a class="btn btn-wa wa" data-msg="Oi! Vim pelo site e quero fazer rapel na Pedra da Tartaruga." data-ev="wa_tartaruga" href="#">Quero esse</a></div></div>
+    <div class="xp rv"><div class="ph"><img src="joatinga.webp" alt="Cliente comemorando no alto da pedra com vista da praia" loading="lazy" width="520" height="924"></div><div class="bd"><span class="lv">Joá</span><h3>Praia da Joatinga</h3><p>Rapel e tirolesa numa das praias mais bonitas do Rio.</p><a class="btn btn-wa wa" data-msg="Oi! Vim pelo site e quero fazer rapel e tirolesa na Joatinga." data-ev="wa_joatinga" href="#">Quero esse</a></div></div>
+    <div class="xp rv"><div class="ph"><img src="cachoeira.webp" alt="Cachoeira de 100 metros de altura" loading="lazy" width="520" height="924"></div><div class="bd"><span class="lv">Temporada de verão</span><h3>Rapel em cachoeira</h3><p>Até 100 metros de altura, descendo pela água.</p><a class="btn btn-wa wa" data-msg="Oi! Vim pelo site e quero entrar na lista da temporada de rapel em cachoeira." data-ev="wa_cachoeira" href="#">Entrar na lista</a></div></div>
+    <div class="xp rv"><div class="ph"><img src="montanha.webp" alt="Rapel em paredão com vista das montanhas" loading="lazy" width="520" height="693"></div><div class="bd"><span class="lv">Toda a cidade</span><h3>Urca, Bico do Papagaio e mais</h3><p>Morro da Urca, Pedra do Picão, Ponte Estaiada ao amanhecer, Gruta do Morcego, Bananal.</p><a class="btn btn-wa wa" data-msg="Oi! Vim pelo site e quero conhecer os destinos de rapel." data-ev="wa_destinos" href="#">Ver opções</a></div></div>
+  </div>
+  <p class="nota"><b>Melhoria · lista de espera da temporada</b>A temporada de cachoeiras foi anunciada, mas não há onde se inscrever. Uma lista de interessados no WhatsApp enche as primeiras datas antes de abrir a agenda.</p>
+</div></section>
+
+<section id="galeria"><div class="wrap">
+  <span class="eyebrow">Quem já desceu</span>
+  <h2>Pessoas reais, <em>experiências incríveis</em></h2>
+  <div class="gal rv">
+    <img src="gal-g03.webp" alt="Cliente no alto de uma cachoeira" loading="lazy" width="420" height="560">
+    <img src="gal-g14.webp" alt="Cliente comemorando no rapel" loading="lazy" width="420" height="747">
+    <img src="gal-g06.webp" alt="Rapel na cachoeira" loading="lazy" width="420" height="747">
+    <img src="gal-g15.webp" alt="Cliente sorrindo no rapel" loading="lazy" width="420" height="747">
+    <img src="gal-g21.webp" alt="Cliente descendo com vista do mar" loading="lazy" width="420" height="560">
+    <img src="gal-g17.webp" alt="Amigas antes do rapel" loading="lazy" width="420" height="747">
+  </div>
+  <p class="nota"><b>Melhoria · 7.000 clientes viram prova</b>Hoje são milhares de fotos e nenhuma avaliação no Google. Depois de cada saída, a foto vai junto com o pedido de avaliação. Em poucos meses, a Rapel Radical passa a aparecer com nota e comentários, como os concorrentes.</p>
+</div></section>
+
+<section id="grupos" style="background:var(--bg2)"><div class="wrap">
+  <div class="grp rv">
+    <img src="costao.webp" alt="Grupo descendo de rapel em costão com vista do mar" loading="lazy" width="520" height="693">
+    <div class="bd"><span class="eyebrow">Grupos e empresas</span><h2>Aniversário, equipe <em>ou turma de amigos</em></h2><p class="lead">Datas exclusivas para grupos, com a mesma segurança e as fotos de todo mundo.</p><div class="cta-row"><a class="btn btn-p wa" data-msg="Oi! Vim pelo site e quero orçar uma aventura para um grupo." data-ev="wa_grupo" href="#">Orçar para meu grupo</a></div></div>
+  </div>
+  <p class="nota"><b>Melhoria · venda maior por conversa</b>Um grupo de 10 pessoas vale 10 vendas numa conversa só. Hoje não existe essa oferta visível.</p>
+</div></section>
+
+<section id="duvidas"><div class="wrap">
+  <div style="text-align:center"><span class="eyebrow">Dúvidas</span><h2>Perguntas <em>frequentes</em></h2></div>
+  <div class="faq">
+    <details><summary>Nunca fiz rapel. Posso ir?</summary><p>Pode. A maioria dos clientes faz rapel pela primeira vez com a gente, e os instrutores explicam tudo antes da descida.</p></details>
+    <details><summary>Tenho medo de altura. E agora?</summary><p>É mais comum do que parece. Conta no WhatsApp, que a equipe indica o destino mais tranquilo para começar.</p></details>
+    <details><summary>Quanto custa?</summary><p>Depende do destino e das atividades. Toque em "Reservar" na data escolhida e o valor vem na primeira resposta.</p></details>
+    <details><summary>O que preciso levar?</summary><p>A lista completa vai no WhatsApp depois da reserva. Equipamento de segurança é por nossa conta.</p></details>
+    <details><summary>As fotos estão inclusas?</summary><p>Sim, fotos profissionais fazem parte da experiência.</p></details>
+  </div>
+  <p class="nota" style="max-width:780px;margin-left:auto;margin-right:auto"><b>Melhoria · respostas antes da pergunta</b>As respostas são rascunho para a equipe validar. O ideal é mostrar o preço "a partir de" aqui mesmo: quem já chega sabendo o valor fecha mais rápido.</p>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <span class="eyebrow">A vida é curta demais</span>
+  <h2>Para ficar só olhando <em>a aventura dos outros</em></h2>
+  <div class="cta-row"><a class="btn btn-p" href="#agenda">Ver próximas datas</a><a class="btn btn-wa wa" data-msg="Oi, Rapel Radical! Vim pelo site e quero reservar uma aventura." data-ev="wa_final" href="#">Chamar no WhatsApp</a></div>
+</div></section>
+</main>
+
+<footer><div class="wrap fgrid">
+  <div><a class="logo" href="#inicio"><img src="perfil.webp" alt="" width="40" height="40"><b>Rapel Radical RJ</b></a><p style="margin-top:10px">Agência de turismo de aventura · Rio de Janeiro · desde 2020</p></div>
+  <div>Reservas: <a class="wa" data-msg="Oi, Rapel Radical! Vim pelo site." href="#">(21) 98140-0511</a><br><a href="https://www.instagram.com/rapel_radical/" target="_blank" rel="noopener">Instagram @rapel_radical</a></div>
+</div></footer>
+
+<div class="sticky" id="sticky"><a class="btn btn-p" href="#agenda">Agenda</a><a class="btn btn-wa wa" data-msg="Oi, Rapel Radical! Vim pelo site e quero reservar." href="#">WhatsApp</a></div>
+
+<button class="tog" id="tog" type="button"><i></i><span>Ver melhorias</span></button>
+<aside class="drawer" id="drawer" aria-label="Melhorias"><div class="dh"><b>O que muda</b><button type="button" id="dx" aria-label="Fechar">✕</button></div><div class="db">
+  <p class="dsub">Cada ponto abaixo está no site, marcado em vermelho. Toque em "Ver no site" para ir até ele.</p>
+  <div id="dlist"></div>
+  <div class="fora"><h4>Fora do site</h4><ul>
+    <li>Criar o Perfil da Empresa no Google. Hoje, buscando "rapel radical rj", aparece a Rio Radical, com 405 avaliações.</li>
+    <li>Pedir avaliação no Google depois de cada saída, junto com as fotos.</li>
+    <li>Colocar este site na bio, no lugar do link solto.</li>
+    <li>Instalar o Pixel da Meta e anunciar a temporada de cachoeiras antes dos concorrentes. Uradical e Expedição Adventure já estão anunciando.</li>
+    <li>Saber de onde vem cada cliente (post, story, Google, indicação) pela mensagem pronta de cada botão.</li>
+  </ul></div>
+</div></aside>
+
+<script>
+document.documentElement.classList.add('js');
+const WA='5521981400511';
+const track=(e,p)=>{try{(window.dataLayer=window.dataLayer||[]).push(Object.assign({event:e},p||{}))}catch(_){}};
+const waUrl=m=>'https://wa.me/'+WA+'?text='+encodeURIComponent(m);
+function bindWa(root){root.querySelectorAll('.wa').forEach(a=>{a.href=waUrl(a.dataset.msg||'Oi, Rapel Radical! Vim pelo site.');a.target='_blank';a.rel='noopener'})}
+document.addEventListener('click',e=>{const a=e.target.closest('[data-ev]');if(a)track(a.dataset.ev)});
+/* agenda: datas da arte "Agenda Novembro" */
+const AG=[['2026-11-02','Morro da Urca','Rapel','Feriado'],['2026-11-07','Pedra do Picão','Rapel',''],['2026-11-08','Ponte Estaiada','Rapel no amanhecer',''],['2026-11-08','Cachoeira do Mendanha','Rapel',''],['2026-11-14','Gruta do Morcego','Rapel',''],['2026-11-15','Praia do Secreto','Rapel','Feriado'],['2026-11-15','Farol','Rapel','Feriado'],['2026-11-20','Bico do Papagaio','Rapel','Feriado'],['2026-11-21','Enseada do Bananal','Rapel',''],['2026-11-22','Pedra do Pontal','Rapel',''],['2026-11-28','Pedra da Tartaruga','Rapel e pêndulo','Sábado · 8h'],['2026-11-29','Praia da Joatinga','Rapel e tirolesa','Domingo']];
+const MES=['JAN','FEV','MAR','ABR','MAI','JUN','JUL','AGO','SET','OUT','NOV','DEZ'];
+const hoje=new Date();hoje.setHours(0,0,0,0);
+const fut=AG.filter(a=>new Date(a[0]+'T12:00')>=hoje);
+const ag=document.getElementById('ag');
+const card=(a,past)=>{const d=new Date(a[0]+'T12:00');const dd=String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0');return '<div class="ev'+(past?' past':'')+'"><div class="dt">'+String(d.getDate()).padStart(2,'0')+'<small>'+MES[d.getMonth()]+'</small></div><div>'+(a[3]?'<span class="tg">'+a[3]+'</span>':'')+'<h3>'+a[1]+'</h3><p>'+a[2]+(past?' · realizado':'')+'</p></div><a class="btn btn-p wa" data-ev="reservar" data-msg="Oi, Rapel Radical! Vim pelo site e quero reservar: '+a[2]+' em '+a[1]+', dia '+dd+'. Tem vaga?" href="#">Reservar</a></div>'};
+ag.innerHTML=(fut.length?fut.map(a=>card(a,false)).join(''):'')+'<div class="ev"><div class="dt">DEZ<small>EM BREVE</small></div><div><span class="tg">Próxima agenda</span><h3>Dezembro e temporada de cachoeiras</h3><p>Entre na lista e receba as datas antes de todo mundo.</p></div><a class="btn btn-wa wa" data-ev="lista_dez" data-msg="Oi, Rapel Radical! Vim pelo site e quero receber a agenda de dezembro e da temporada de cachoeiras." href="#">Entrar na lista</a></div>'+AG.filter(a=>!fut.includes(a)).slice(-3).reverse().map(a=>card(a,true)).join('');
+bindWa(document);
+/* quiz */
+const Q=[{q:'Você já fez rapel?',o:['Nunca, seria a primeira vez','Já fiz uma ou duas vezes','Já fiz várias, quero algo novo']},{q:'O que mais te chama?',o:['Pedra com vista para o mar','Cachoeira','Rapel com tirolesa ou pêndulo','Levar meu grupo ou empresa']},{q:'Quando quer ir?',o:['Neste fim de semana','Ainda este mês','Estou planejando para depois']}];
+const box=document.getElementById('qbox');let st=0,ans=[];
+function rq(){if(st<Q.length){const s=Q[st];box.innerHTML='<div class="qbar"><i style="width:'+((st+1)/Q.length*100)+'%"></i></div><div class="qstep"><small>Pergunta '+(st+1)+' de '+Q.length+'</small><h3>'+s.q+'</h3><div class="opts">'+s.o.map((o,i)=>'<button type="button" data-i="'+i+'">'+o+'</button>').join('')+'</div></div>';return}
+ const [a,b,c]=ans;let r;
+ if(b===3)r=['Aventura para grupos','Data exclusiva para a sua turma, com fotos de todo mundo.'];
+ else if(b===1)r=['Rapel em cachoeira','A temporada de verão está chegando. Entre na lista e garanta as primeiras datas.'];
+ else if(b===2)r=['Rapel com pêndulo ou tirolesa','Duas emoções no mesmo dia: Pedra da Tartaruga ou Praia da Joatinga.'];
+ else if(a===0)r=['Primeiro rapel com vista para o mar','O jeito mais bonito de começar: instrutor do lado, mar lá embaixo e fotos inclusas.'];
+ else r=['Rapel de frente para o mar','Escolha a próxima data na agenda e garanta a vaga.'];
+ const msg='Oi, Rapel Radical! Fiz o teste no site e deu: '+r[0]+'. Já fiz rapel: '+Q[0].o[a]+'. Quando: '+Q[2].o[c]+'. Quais as próximas datas e o valor?';
+ box.innerHTML='<div class="qbar"><i style="width:100%"></i></div><div class="qres"><small style="color:var(--mut)">Sua aventura é</small><h3>'+r[0]+'</h3><p>'+r[1]+'</p><a class="btn btn-wa" target="_blank" rel="noopener" href="'+waUrl(msg)+'" data-ev="wa_quiz">Falar no WhatsApp</a><button class="again" type="button">Refazer o teste</button></div>';track('quiz_fim',{resultado:r[0]})}
+box.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.classList.contains('again')){st=0;ans=[];rq();return}if(b.dataset.i!==undefined){ans.push(+b.dataset.i);st++;rq()}});rq();
+/* reveal + sticky */
+const rv=[...document.querySelectorAll('.rv')],sk=document.getElementById('sticky'),hero=document.querySelector('.hero'),fin=document.querySelector('.final');
+const tick=()=>{rv.forEach(el=>{if(!el.classList.contains('in')&&el.getBoundingClientRect().top<innerHeight*.95)el.classList.add('in')});const f=fin.getBoundingClientRect();sk.classList.toggle('on',hero.getBoundingClientRect().bottom<0&&!(f.top<innerHeight&&f.bottom>0))};
+addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick);tick();
+/* melhorias */
+const tog=document.getElementById('tog'),dr=document.getElementById('drawer'),dl=document.getElementById('dlist');
+const notas=[...document.querySelectorAll('.nota')];
+dl.innerHTML=notas.map((n,i)=>{const b=n.querySelector('b').textContent;return '<div class="di"><b>'+(i+1)+'. '+b.replace('Melhoria · ','')+'</b><p>'+n.textContent.replace(b,'')+'</p><button type="button" data-n="'+i+'">Ver no site →</button></div>'}).join('');
+function openM(){document.body.classList.add('melhorias');dr.classList.add('on');tog.style.display='none';track('ver_melhorias')}
+function closeM(){document.body.classList.remove('melhorias');dr.classList.remove('on');tog.style.display=''}
+tog.onclick=openM;document.getElementById('dx').onclick=closeM;
+dl.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const n=notas[+b.dataset.n];dr.classList.remove('on');tog.style.display='';n.scrollIntoView({behavior:'smooth',block:'center'});n.classList.remove('flash');void n.offsetWidth;n.classList.add('flash')});
+addEventListener('keydown',e=>{if(e.key==='Escape')closeM()});
+</script>
+</body>
+</html>
